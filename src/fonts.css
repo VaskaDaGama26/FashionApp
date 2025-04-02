@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Gropled-Bold";
+  src: url("/fonts/Gropled-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@theme {
+  --gropled-font: "Gropled-Bold", sans-serif;
+}
+
+.gropled-font {
+  font-family: var(--gropled-font);
+}

@@ -1,0 +1,13 @@
+@import "./fonts.css";
+
+@import "tailwindcss";
+
+:root {
+  --gray: #737272;
+  --coral: #FF8966;
+}
+
+html {
+  background-color: #E2E3DD; height: 100vh;
+  font-family: "Inter", sans-serif;
+}
