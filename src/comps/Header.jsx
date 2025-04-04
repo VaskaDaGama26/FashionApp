@@ -6,6 +6,28 @@ import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > scrollPosition && currentScroll > 600) {
+        setHidden(true);
+      } else {
+        setHidden(false); 
+      }
+
+      setScrollPosition(currentScroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -38,12 +60,16 @@ const Header = () => {
       label: "Напишите нам",
       link: "#contacts",
       classes:
-        "cursor-pointer text-base px-4 py-2 bg-neutral-50 rounded-sm border-b-1 border-(--coral) hover:border-b-3 hover:duration-300",
+        "w-fit mx-auto cursor-pointer text-base px-4 py-2 bg-neutral-50 rounded-sm border-b-1 border-(--coral) hover:border-b-3 hover:duration-300",
     },
   ];
 
   return (
-    <div className="sticky top-4 max-w-7xl mx-2.5 xl:mx-auto z-50">
+    <header
+      className={`sticky top-4 max-w-7xl mx-2.5 xl:mx-auto z-50 duration-300 ${
+        hidden ? "-translate-y-[calc(100%+1rem)]" : "translate-y-0"
+      }`}
+    >
       <div className="h-[60px] flex flex-row items-center justify-between px-6 backdrop-blur-sm bg-[#ffffff40] rounded-2xl">
         <img className="w-[100px]" src={logo} alt="Fashion" />
         <ul className="flex-row items-center gap-6 text-base font-light hidden md:flex text-neutral-950">
@@ -66,7 +92,7 @@ const Header = () => {
       {menuOpen && (
         <MobileMenu items={navItems} closeMenu={() => setMenuOpen(false)} />
       )}
-    </div>
+    </header>
   );
 };
 

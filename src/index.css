@@ -10,4 +10,5 @@
 html {
   background-color: #E2E3DD; height: 100vh;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
