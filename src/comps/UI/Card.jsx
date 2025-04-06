@@ -1,10 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Card = ({ specs }) => {
+const Card = ({ specs, category }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/card/${category}/${specs.id}`);
+  };
+
   return (
     <>
-      <a className={`flex flex-col gap-0 shadow-md w-[300px] sm:w-96 mx-auto lg:mx-0`} href="/">
-        <img className="hover:grayscale-75 duration-500" src={specs.img} alt={specs.img} />
+      <div
+        className={`flex flex-col gap-0 shadowCustom cursor-pointer w-[300px] sm:w-96 mx-auto lg:mx-0`}
+        onClick={handleClick}
+      >
+        <img
+          className="hover:grayscale-75 duration-500"
+          src={specs.img}
+          alt={specs.img}
+        />
         <div className="h-[92px] bg-neutral-50">
           <div className="flex flex-row items-center justify-between px-4 py-6">
             <div>
@@ -18,7 +32,7 @@ const Card = ({ specs }) => {
             </p>
           </div>
         </div>
-      </a>
+      </div>
     </>
   );
 };

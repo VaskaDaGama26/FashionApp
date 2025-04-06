@@ -3,11 +3,18 @@ import burger from "/icons/Menu.svg";
 import close from "/icons/Close.svg";
 import logo from "/Logo.svg";
 import MobileMenu from "./MobileMenu";
+import navigateToSection from "../navigateToSection";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [pendingScroll, setPendingScroll] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,8 +22,9 @@ const Header = () => {
 
       if (currentScroll > scrollPosition && currentScroll > 600) {
         setHidden(true);
+        setMenuOpen(false);
       } else {
-        setHidden(false); 
+        setHidden(false);
       }
 
       setScrollPosition(currentScroll);
@@ -29,6 +37,16 @@ const Header = () => {
     };
   }, [scrollPosition]);
 
+  useEffect(() => {
+    if (pendingScroll && location.pathname === "/") {
+      const element = document.getElementById(pendingScroll);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setPendingScroll(null);
+      }
+    }
+  }, [location, pendingScroll]);
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -37,28 +55,32 @@ const Header = () => {
     {
       id: 1,
       label: "Главная",
-      link: "#main",
+      action: () =>
+        navigateToSection(navigate, location, setPendingScroll, "main"),
       classes:
-        "hover:transition-transform hover:duration-400 hover:translate-y-0.5 hover:text-(--gray)",
+        "hover:transition-transform cursor-pointer hover:duration-400 hover:translate-y-0.5 hover:text-(--gray)",
     },
     {
       id: 2,
       label: "Каталог",
-      link: "#catalog",
+      action: () =>
+        navigateToSection(navigate, location, setPendingScroll, "catalog"),
       classes:
-        "hover:transition-transform hover:duration-400 hover:translate-y-0.5 hover:text-(--gray)",
+        "hover:transition-transform cursor-pointer hover:duration-400 hover:translate-y-0.5 hover:text-(--gray)",
     },
     {
       id: 3,
       label: "FAQ",
-      link: "#faq",
+      action: () =>
+        navigateToSection(navigate, location, setPendingScroll, "faq"),
       classes:
-        "hover:transition-transform hover:duration-400 hover:translate-y-0.5 hover:text-(--gray)",
+        "hover:transition-transform cursor-pointer hover:duration-400 hover:translate-y-0.5 hover:text-(--gray)",
     },
     {
       id: 4,
       label: "Напишите нам",
-      link: "#contacts",
+      action: () =>
+        navigateToSection(navigate, location, setPendingScroll, "contacts"),
       classes:
         "w-fit mx-auto cursor-pointer text-base px-4 py-2 bg-neutral-50 rounded-sm border-b-1 border-(--coral) hover:border-b-3 hover:duration-300",
     },
@@ -71,12 +93,19 @@ const Header = () => {
       }`}
     >
       <div className="h-[60px] flex flex-row items-center justify-between px-6 backdrop-blur-sm bg-[#ffffff40] rounded-2xl">
-        <img className="w-[100px]" src={logo} alt="Fashion" />
+        <div
+          className="cursor-pointer"
+          onClick={() =>
+            navigateToSection(navigate, location, setPendingScroll, "main")
+          }
+        >
+          <img className="w-[100px]" src={logo} alt="Fashion" />
+        </div>
         <ul className="flex-row items-center gap-6 text-base font-light hidden md:flex text-neutral-950">
           {navItems.map((item, index) => (
-            <a className={item.classes} key={index} href={item.link}>
-              <li>{item.label}</li>
-            </a>
+            <li className={item.classes} key={index} onClick={item.action}>
+              {item.label}
+            </li>
           ))}
         </ul>
         <div onClick={toggleMenu} className="flex md:hidden">

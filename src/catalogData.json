@@ -1,0 +1,64 @@
+{
+  "nomad": [
+    {
+      "id": 1,
+      "label": "Beige Suit (M)",
+      "collection": "Fashion Nomad",
+      "price": "12.990",
+      "img": "/cards/nomad/NomadM1.jpg"
+    },
+    {
+      "id": 2,
+      "label": "Beige Suit (W)",
+      "collection": "Fashion Nomad",
+      "price": "15.990",
+      "img": "/cards/nomad/NomadW1.jpg"
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "Orange Suit (M)",
+      "collection": "Fashion Colors",
+      "price": "9.990",
+      "img": "/cards/colors/ColorsOrange1.jpg"
+    },
+    {
+      "id": 2,
+      "label": "Red Suit (W)",
+      "collection": "Fashion Colors",
+      "price": "13.990",
+      "img": "/cards/colors/ColorsRed1.jpg"
+    },
+    {
+      "id": 3,
+      "label": "BLUE/ORANGE (W)",
+      "collection": "Fashion Colors",
+      "price": "24.990",
+      "img": "/cards/colors/ColorsBlue1.jpg"
+    }
+  ],
+  "garden": [
+    {
+      "id": 1,
+      "label": "GARDEN/BLACK (M)",
+      "collection": "FASHION NATURE",
+      "price": "5.990",
+      "img": "/cards/garden/GardenBlack1.jpg"
+    },
+    {
+      "id": 2,
+      "label": "BLACK/WHITE (M)",
+      "collection": "FASHION NATURE",
+      "price": "11.990",
+      "img": "/cards/garden/GardenWhite1.jpg"
+    },
+    {
+      "id": 3,
+      "label": "RED&STRIPES (M)",
+      "collection": "FASHION NATURE",
+      "price": "48.990",
+      "img": "/cards/garden/GardenRed1.jpg"
+    }
+  ]
+}

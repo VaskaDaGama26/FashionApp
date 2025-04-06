@@ -1,25 +1,18 @@
-import React from "react";
-import right from "/icons/Arrow_Right.svg";
+import React from 'react'
+import FirstScreen from './FirstScreen'
+import NewCollection from './NewCollection'
+import Catalog from './Catalog'
+import FAQ from './FAQ'
+import Footer from './Footer'
 
 const MainPage = () => {
   return (
-      <div id="main" className="relative h-dvh bg-[url(/BG.jpg)] bg-cover bg-center -mt-[60px] mb-24">
-        <div className="max-w-7xl flex flex-col gap-3 mx-auto absolute bottom-5 sm:bottom-10 left-0 right-0">
-          <a href="#catalog" className="w-fit rounded-2xl flex flex-row items-center gap-2 text-base/tight px-5 py-1.5 mx-2.5 bg-neutral-50 group transition-transform duration-300 hover:cursor-pointer">
-            <p className="text-neutral-950">Каталог</p>
-            <span className="h-4 w-[1px] bg-gray-400"></span>
-            <p className="text-(--gray) font-light transition-colors group-hover:text-neutral-950">
-              Перейти
-            </p>
-            <img className="transition-transform duration-300 group-hover:translate-x-1" src={right} alt="Catalog" />
-          </a>
+    <>
+    <FirstScreen />
+      <NewCollection />
+      <Catalog />
+    </>
+  )
+}
 
-          <h1 className="text-4xl/snug sm:text-6xl/snug px-2.5 px- gropled-font">
-            Стиль для тех, кто впереди
-          </h1>
-        </div>
-      </div>
-  );
-};
-
-export default MainPage;
+export default MainPage
