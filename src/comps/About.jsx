@@ -11,19 +11,19 @@ const About = () => {
       id: 1,
       name: "Oliver Grant",
       role: "Co-Founder",
-      img: "/about/about2.jpg",
+      img: "/FashionApp/about/about2.jpg",
     },
     {
       id: 2,
       name: "Ethan Hughes",
       role: "CEO of Fashion",
-      img: "/about/about1.jpg",
+      img: "/FashionApp/about/about1.jpg",
     },
     {
       id: 3,
       name: "Sophia Bennett",
       role: "Co-Founder",
-      img: "/about/about3.jpg",
+      img: "/FashionApp/about/about3.jpg",
     },
   ];
 

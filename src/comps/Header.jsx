@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import burger from "/icons/Menu.svg";
-import close from "/icons/Close.svg";
-import logo from "/Logo.svg";
+import burger from "/FashionApp/icons/Menu.svg";
+import close from "/FashionApp/icons/Close.svg";
+import logo from "/FashionApp/Logo.svg";
 import MobileMenu from "./MobileMenu";
 import navigateToSection from "../navigateToSection";
 import { useNavigate, useLocation } from "react-router-dom";

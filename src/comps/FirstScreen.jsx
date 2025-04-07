@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import right from "/icons/Arrow.svg";
+import right from "/FashionApp/icons/Arrow.svg";
 import navigateToSection from "../navigateToSection";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -21,7 +21,7 @@ const FirstScreen = () => {
   return (
     <div
       id="main"
-      className="relative h-dvh bg-[url(/BG.jpg)] bg-cover bg-center -mt-[60px] mb-24"
+      className="relative h-dvh bg-[url(/FashionApp/BG.jpg)] bg-cover bg-center -mt-[60px] mb-24"
     >
       <div className="max-w-7xl flex flex-col gap-3 mx-auto absolute bottom-5 sm:bottom-10 left-0 right-0">
         <div

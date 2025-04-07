@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../catalogData.json";
-import arrow from "/icons/arrowButtonWhite.svg";
+import arrow from "/FashionApp/icons/arrowButtonWhite.svg";
 
 const CardDetail = () => {
   const { category, id } = useParams();

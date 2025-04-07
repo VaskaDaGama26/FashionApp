@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "/Logo.svg";
+import logo from "/FashionApp/Logo.svg";
 import navigateToSection from "../navigateToSection";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -10,10 +10,10 @@ const Footer = () => {
   const [pendingScroll, setPendingScroll] = useState(null);
 
   const socialsItems = [
-    { id: 1, icon: "/socials/TG.svg", alt: "Telegram", href: "/" },
-    { id: 2, icon: "/socials/VK.svg", alt: "Vk", href: "/" },
-    { id: 3, icon: "/socials/TT.svg", alt: "Tiktok", href: "/" },
-    { id: 4, icon: "/socials/WP.svg", alt: "WhatsApp", href: "/" },
+    { id: 1, icon: "/FashionApp/socials/TG.svg", alt: "Telegram", href: "/" },
+    { id: 2, icon: "/FashionApp/socials/VK.svg", alt: "Vk", href: "/" },
+    { id: 3, icon: "/FashionApp/socials/TT.svg", alt: "Tiktok", href: "/" },
+    { id: 4, icon: "/FashionApp/socials/WP.svg", alt: "WhatsApp", href: "/" },
   ];
 
   useEffect(() => {
