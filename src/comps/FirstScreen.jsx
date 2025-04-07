@@ -9,7 +9,7 @@ const FirstScreen = () => {
   const [pendingScroll, setPendingScroll] = useState(null);
 
   useEffect(() => {
-    if (pendingScroll && location.pathname === "/") {
+    if (pendingScroll && location.pathname === "/FashionApp/") {
       const element = document.getElementById(pendingScroll);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });

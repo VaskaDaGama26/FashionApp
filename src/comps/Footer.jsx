@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   useEffect(() => {
-    if (pendingScroll && location.pathname === "/") {
+    if (pendingScroll && location.pathname === "/FashionApp/") {
       const element = document.getElementById(pendingScroll);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });

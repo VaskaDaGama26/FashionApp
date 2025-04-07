@@ -8,7 +8,7 @@ import About from "./comps/About.jsx";
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />
@@ -17,7 +17,7 @@ function App() {
       </Routes>
       <FAQ />
       <Footer />
-    </Router>
+    </>
   );
 }
 
