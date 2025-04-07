@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "/FashionApp/Logo.svg";
+import logo from "/Logo.svg";
 import navigateToSection from "../navigateToSection";
 import { useNavigate, useLocation } from "react-router-dom";
 
