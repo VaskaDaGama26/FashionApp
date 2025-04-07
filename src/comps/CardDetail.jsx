@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../catalogData.json";
 import arrow from "/icons/arrowButtonWhite.svg";
 
 const CardDetail = () => {
   const { category, id } = useParams();
+  const [activeSize, setActiveSize] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,12 +14,21 @@ const CardDetail = () => {
   const card = data[category]?.find((item) => item.id === parseInt(id));
 
   if (!card) {
-    return <h1>Card not found</h1>;
+    return (
+      <h1 className="mt-12 mb-32 mx-auto px-6 text-6xl max-w-7xl">
+        Card not found
+      </h1>
+    );
   }
 
+  const handleSizeClick = (sizeName, isActive) => {
+    if (isActive === "false") return;
+    setActiveSize(sizeName);
+  };
+
   return (
-    <div className="max-w-6xl mx-auto px-2.5 mb-24">
-      <div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center mx-auto">
+    <div className="max-w-7xl mx-auto px-2.5 mb-24">
+      <div className="flex flex-col xl:flex-row justify-center gap-24 items-center mx-auto">
         {/* PHOTOS */}
         <div className="flex flex-col sm:flex-row gap-4 my-16">
           <img
@@ -28,32 +38,50 @@ const CardDetail = () => {
           />
           <div className="flex flex-row sm:flex-col gap-4 mx-auto sm:mx-0">
             <img
-              src={card.img}
+              src={card.img2}
               alt={card.label}
-              className="w-[142px] sm:w-[193px] h-auto"
+              className="w-[142px] h-[172px] sm:w-[193px] sm:h-[234px]"
             />
             <img
-              src={card.img}
+              src={card.img3}
               alt={card.label}
-              className="w-[142px] sm:w-[193px] h-auto"
+              className="w-[142px] h-[172px] sm:w-[193px] sm:h-[234px]"
             />
           </div>
         </div>
         {/* RIGHT */}
         <div className="gap-4 flex flex-col">
-          <h1 className="text-4xl sm:text-[64px]/tight font-medium">{card.label}</h1>
+          <h1 className="text-4xl sm:text-5xl/tight font-medium">
+            {card.label}
+          </h1>
           <p className="text-[28px] font-bold">{card.price} RUB</p>
-          <div>
+          {/* SIZES */}
+          <div className="gap-4 flex flex-col">
             <h3 className="font-base">РАЗМЕР</h3>
+            <div className="flex flex-row gap-2">
+              {card.size.map((size) => (
+                <div
+                  key={size.id}
+                  onClick={() => handleSizeClick(size.name)}
+                  className={`text-base/tight font-light w-8 h-8 flex items-center justify-center border
+                    ${
+                      size.active === "false"
+                        ? "border-(--gray25) text-(--gray25)"
+                        : activeSize === size.name
+                        ? "border-neutral-950 text-neutral-950 cursor-pointer"
+                        : "border-(--gray50) text-neutral-950 cursor-pointer"
+                    }`}
+                >
+                  {size.name}
+                </div>
+              ))}
+            </div>
           </div>
           <p className="max-w-[487px] text-base/normal text-neutral-950">
-            Beige Suit коллекции FASHION NOMAD – это сочетание элегантности и
-            современного стиля. Он выполнен из высококачественных материалов,
-            обеспечивающих комфорт и непревзойденный внешний вид.
+            {card.desc}
           </p>
-          <p className="max-w-[487px] text-base/normal text-(--gray)">
-            Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100%
-            полиэстера
+          <p className="max-w-[487px] text-base/normal text-gray-600">
+            {card.material}
           </p>
           <button className="rounded-lg bg-neutral-950 text-neutral-50 text-center flex flex-row items-center text-xl/tight px-8 py-3 w-fit duration-500 cursor-pointer relative overflow-hidden group">
             <span className="uppercase duration-500 relative inline-block cursor-pointer group-hover:pr-2">

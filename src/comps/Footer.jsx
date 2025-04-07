@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
 import logo from "/Logo.svg";
-import tg from "/socials/TG.svg";
-import vk from "/socials/VK.svg";
-import tt from "/socials/TT.svg";
-import wp from "/socials/WP.svg";
 import navigateToSection from "../navigateToSection";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -14,10 +10,10 @@ const Footer = () => {
   const [pendingScroll, setPendingScroll] = useState(null);
 
   const socialsItems = [
-    { id: 1, icon: "", alt: "", href: "" },
-    { id: 2, icon: "", alt: "", href: "" },
-    { id: 3, icon: "", alt: "", href: "" },
-    { id: 4, icon: "", alt: "", href: "" },
+    { id: 1, icon: "/socials/TG.svg", alt: "Telegram", href: "/" },
+    { id: 2, icon: "/socials/VK.svg", alt: "Vk", href: "/" },
+    { id: 3, icon: "/socials/TT.svg", alt: "Tiktok", href: "/" },
+    { id: 4, icon: "/socials/WP.svg", alt: "WhatsApp", href: "/" },
   ];
 
   useEffect(() => {
@@ -29,6 +25,10 @@ const Footer = () => {
       }
     }
   }, [location, pendingScroll]);
+
+  const aboutClick = () => {
+    navigate(`/about`);
+  };
 
   return (
     <div
@@ -44,26 +44,16 @@ const Footer = () => {
       </div>
       {/* Socials */}
       <div className="flex flex-row gap-8">
-        <div className="h-8 w-8 flex items-center justify-center hover:bg-(--coral) rounded-2xl transition-transform duration-300 hover:-translate-y-0.5">
-          <a href="/" target="_blank">
-            <img src={tg} alt="Telegram" />
-          </a>
-        </div>
-        <div className="h-8 w-8 flex items-center justify-center hover:bg-(--coral) rounded-2xl transition-transform duration-300 hover:-translate-y-0.5">
-          <a href="/" target="_blank">
-            <img src={vk} alt="VK" />
-          </a>
-        </div>
-        <div className="h-8 w-8 flex items-center justify-center hover:bg-(--coral) rounded-2xl transition-transform duration-300 hover:-translate-y-0.5">
-          <a href="/" target="_blank">
-            <img src={tt} alt="TikTok" />
-          </a>
-        </div>
-        <div className="h-8 w-8 flex items-center justify-center hover:bg-(--coral) rounded-2xl transition-transform duration-300 hover:-translate-y-0.5">
-          <a href="/" target="_blank">
-            <img src={wp} alt="WhatsApp" />
-          </a>
-        </div>
+        {socialsItems.map((item, index) => (
+          <div
+            key={index}
+            className="h-8 w-8 flex items-center justify-center hover:bg-(--coral) rounded-2xl transition-transform duration-300 hover:-translate-y-0.5"
+          >
+            <a href={item.href} target="_blank">
+              <img src={item.icon} alt={item.alt} />
+            </a>
+          </div>
+        ))}
       </div>
       {/* DOCS */}
       <div className="flex flex-col sm:flex-row gap-2 items-center">
@@ -83,12 +73,12 @@ const Footer = () => {
           Оферта и политика конфиденциальности
         </a>
         <span className="h-4 w-[1px] bg-(--gray) sm:block hidden"></span>
-        <a
+        <div
           className="text-(--gray) font-light transition-transform hover:translate-y-0.5 duration-400 text-center"
-          href="/"
+          onClick={aboutClick}
         >
           О бренде
-        </a>
+        </div>
       </div>
       {/* RIGHTS & DEV */}
       <div className="flex flex-col gap-2 items-center mb-16">

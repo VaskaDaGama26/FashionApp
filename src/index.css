@@ -2,7 +2,9 @@
 @import "tailwindcss";
 
 :root {
-  --gray: #737272;
+  --gray: #737372;
+  --gray50: #73727250;
+  --gray25: #73727225;
   --coral: #ff8966;
   --green: #0a493c;
 }
@@ -43,49 +45,4 @@ html {
   to {
     width: 100%;
   }
-}
-
-.button {
-  border-radius: 8px;
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 20px;
-  padding-inline: 24px;
-  padding-block: 12px;
-  width: fit-content;
-  transition: all 0.5s;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button img {
-  position: absolute;
-  opacity: 0;
-  top: 50%;
-  right: -10px;
-  transform: translateY(-50%);
-  transition: 0.5s;
-  height: 16px;
-}
-
-.button:hover img {
-  opacity: 1;
-  right: 10px;
-}
-
-.button:hover span {
-  padding-right: 12px;
 }

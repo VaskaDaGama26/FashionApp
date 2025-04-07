@@ -22,7 +22,7 @@ const NewCollection = () => {
           className="w-56 text-base overflow-hidden font-light mx-auto"
         >
           <Marquee play={inView} autoFill="true">
-            <span className="text-(--coral)">&nbsp;*&nbsp;</span> NOMAD NOMAD{" "}
+            <span className="text-(--coral)">&nbsp;*&nbsp;</span> NOMAD NOMAD
           </Marquee>
         </div>
         {/* Heading */}

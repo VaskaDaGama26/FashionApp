@@ -5,14 +5,34 @@
       "label": "Beige Suit (M)",
       "collection": "Fashion Nomad",
       "price": "12.990",
-      "img": "/cards/nomad/NomadM1.jpg"
+      "img": "/cards/nomad/NomadM1.jpg",
+      "img2": "/cards/nomad/NomadM2.jpg",
+      "img3": "/cards/nomad/NomadM3.jpg",
+      "desc": "Beige Suit коллекции FASHION NOMAD – это сочетание элегантности и современного стиля. Он выполнен из высококачественных материалов, обеспечивающих комфорт и непревзойденный внешний вид.",
+      "material": "Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100% полиэстера",
+      "size": [
+        { "id": 1, "name": "S", "active": "false" },
+        { "id": 2, "name": "M", "active": "true" },
+        { "id": 3, "name": "L", "active": "true" },
+        { "id": 4, "name": "XL", "active": "true" }
+      ]
     },
     {
       "id": 2,
       "label": "Beige Suit (W)",
       "collection": "Fashion Nomad",
       "price": "15.990",
-      "img": "/cards/nomad/NomadW1.jpg"
+      "img": "/cards/nomad/NomadW1.jpg",
+      "img2": "/cards/nomad/NomadW2.jpg",
+      "img3": "/cards/nomad/NomadW3.jpg",
+      "desc": "Beige Suit коллекции FASHION NOMAD – это сочетание элегантности и современного стиля. Он выполнен из высококачественных материалов, обеспечивающих комфорт и непревзойденный внешний вид.",
+      "material": "Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100% полиэстера",
+      "size": [
+        { "id": 1, "name": "S", "active": "false" },
+        { "id": 2, "name": "M", "active": "true" },
+        { "id": 3, "name": "L", "active": "true" },
+        { "id": 4, "name": "XL", "active": "true" }
+      ]
     }
   ],
   "colors": [
@@ -21,21 +41,51 @@
       "label": "Orange Suit (M)",
       "collection": "Fashion Colors",
       "price": "9.990",
-      "img": "/cards/colors/ColorsOrange1.jpg"
+      "img": "/cards/colors/ColorsOrange1.jpg",
+      "img2": "/cards/colors/ColorsOrange2.jpg",
+      "img3": "/cards/colors/ColorsOrange3.jpg",
+      "desc": "Orange Suit коллекции FASHION COLORS – это сочетание элегантности и современного стиля. Он выполнен из высококачественных материалов, обеспечивающих комфорт и непревзойденный внешний вид.",
+      "material": "Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100% полиэстера",
+      "size": [
+        { "id": 1, "name": "S", "active": "true" },
+        { "id": 2, "name": "M", "active": "false" },
+        { "id": 3, "name": "L", "active": "true" },
+        { "id": 4, "name": "XL", "active": "true" }
+      ]
     },
     {
       "id": 2,
       "label": "Red Suit (W)",
       "collection": "Fashion Colors",
       "price": "13.990",
-      "img": "/cards/colors/ColorsRed1.jpg"
+      "img": "/cards/colors/ColorsRed1.jpg",
+      "img2": "/cards/colors/ColorsRed2.jpg",
+      "img3": "/cards/colors/ColorsRed3.jpg",
+      "desc": "Red Suit коллекции FASHION COLORS – это сочетание элегантности и современного стиля. Он выполнен из высококачественных материалов, обеспечивающих комфорт и непревзойденный внешний вид.",
+      "material": "Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100% полиэстера",
+      "size": [
+        { "id": 1, "name": "S", "active": "true" },
+        { "id": 2, "name": "M", "active": "true" },
+        { "id": 3, "name": "L", "active": "false" },
+        { "id": 4, "name": "XL", "active": "true" }
+      ]
     },
     {
       "id": 3,
       "label": "BLUE/ORANGE (W)",
       "collection": "Fashion Colors",
       "price": "24.990",
-      "img": "/cards/colors/ColorsBlue1.jpg"
+      "img": "/cards/colors/ColorsBlue1.jpg",
+      "img2": "/cards/colors/ColorsBlue2.jpg",
+      "img3": "/cards/colors/ColorsBlue3.jpg",
+      "desc": "BLUE/ORANGE коллекции FASHION COLORS – это сочетание элегантности и современного стиля. Он выполнен из высококачественных материалов, обеспечивающих комфорт и непревзойденный внешний вид.",
+      "material": "Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100% полиэстера",
+      "size": [
+        { "id": 1, "name": "S", "active": "true" },
+        { "id": 2, "name": "M", "active": "true" },
+        { "id": 3, "name": "L", "active": "true" },
+        { "id": 4, "name": "XL", "active": "false" }
+      ]
     }
   ],
   "garden": [
@@ -44,21 +94,51 @@
       "label": "GARDEN/BLACK (M)",
       "collection": "FASHION NATURE",
       "price": "5.990",
-      "img": "/cards/garden/GardenBlack1.jpg"
+      "img": "/cards/garden/GardenBlack1.jpg",
+      "img2": "/cards/garden/GardenBlack2.jpg",
+      "img3": "/cards/garden/GardenBlack3.jpg",
+      "desc": "GARDEN/BLACK коллекции FASHION NATURE – это сочетание элегантности и современного стиля. Он выполнен из высококачественных материалов, обеспечивающих комфорт и непревзойденный внешний вид.",
+      "material": "Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100% полиэстера",
+      "size": [
+        { "id": 1, "name": "S", "active": "false" },
+        { "id": 2, "name": "M", "active": "true" },
+        { "id": 3, "name": "L", "active": "false" },
+        { "id": 4, "name": "XL", "active": "true" }
+      ]
     },
     {
       "id": 2,
       "label": "BLACK/WHITE (M)",
       "collection": "FASHION NATURE",
       "price": "11.990",
-      "img": "/cards/garden/GardenWhite1.jpg"
+      "img": "/cards/garden/GardenWhite1.jpg",
+      "img2": "/cards/garden/GardenWhite2.jpg",
+      "img3": "/cards/garden/GardenWhite3.jpg",
+      "desc": "BLACK/WHITE коллекции FASHION NATURE – это сочетание элегантности и современного стиля. Он выполнен из высококачественных материалов, обеспечивающих комфорт и непревзойденный внешний вид.",
+      "material": "Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100% полиэстера",
+      "size": [
+        { "id": 1, "name": "S", "active": "false" },
+        { "id": 2, "name": "M", "active": "false" },
+        { "id": 3, "name": "L", "active": "true" },
+        { "id": 4, "name": "XL", "active": "true" }
+      ]
     },
     {
       "id": 3,
       "label": "RED&STRIPES (M)",
       "collection": "FASHION NATURE",
       "price": "48.990",
-      "img": "/cards/garden/GardenRed1.jpg"
+      "img": "/cards/garden/GardenRed1.jpg",
+      "img2": "/cards/garden/GardenRed2.jpg",
+      "img3": "/cards/garden/GardenRed3.jpg",
+      "desc": "RED&STRIPES коллекции FASHION NATURE – это сочетание элегантности и современного стиля. Он выполнен из высококачественных материалов, обеспечивающих комфорт и непревзойденный внешний вид.",
+      "material": "Материал: 70% шерсти и 30% вискозы, подкладка выполнена из 100% полиэстера",
+      "size": [
+        { "id": 1, "name": "S", "active": "false" },
+        { "id": 2, "name": "M", "active": "true" },
+        { "id": 3, "name": "L", "active": "true" },
+        { "id": 4, "name": "XL", "active": "false" }
+      ]
     }
   ]
 }
